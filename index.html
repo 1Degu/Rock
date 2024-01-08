@@ -22,30 +22,31 @@
             if (playerSelection == "Rock" && computerPick == "Scissors") {
                 return "player wins"
             } else if (playerSelection == "Rock" && computerPick == "Paper") {
-                return "computer Win"
+                return "computer wins"
 				} else if (playerSelection == "Scissors" && computerPick == "Rock") {
-					return "computer Win"
+					return "computer wins"
 				} else if (playerSelection == "Scissors" && computerPick == "Paper") {
 					return "player wins"
 				} else if (playerSelection == "Paper" && computerPick == "Rock") {
 					return "player wins"
 				} else if (playerSelection == "Paper" && computerPick == "Scissors") {
-					return "computer Win"
+					return "computer wins"
                  } else {
                     console.log("another result");
 				}
 
             }
         
-
-
-playRound(playerSelection, computerPick);
+let computerScore = 0;
+let playerScore = 0;
 
 function game() {
 
-for (let i = 0; i < 5; i++) {
+for (let round = 0; round < 5; round++) {
     playRound(playerSelection, computerPick);
 } 
+console.log(playerScore);
+    console.log(computerScore);
 }
 game();
     </script>
