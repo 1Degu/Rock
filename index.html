@@ -6,6 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        let choice = ["Rock", "Paper", "scissors"];
+        let computerPick ;
+        function getComputerChoice() {
+         computerPick  = choice [Math.floor(Math.random() * choice.length)];
+        }
+        getComputerChoice();
+        console.log(computerPick);
+    </script>
 </body>
 </html>
