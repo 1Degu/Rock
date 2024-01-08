@@ -10,13 +10,22 @@
         let playerSelection = prompt("Please enter Rock, Paper or Scissors:");
         console.log(playerSelection);
 
-        let choice = ["Rock", "Paper", "scissors"];
+        let choice = ["Rock", "Paper", "Scissors"];
         let computerPick ;
         function getComputerChoice() {
          computerPick  = choice [Math.floor(Math.random() * choice.length)];
         }
         getComputerChoice();
         console.log(computerPick);
+
+        function playRound(playerSelection, computerPick) {
+            if (playerSelection == "Rock" && computerPick == "Scissors") {
+                console.log("player Wins"); }
+                else {
+                    console.log("another result");
+				}
+
+}
     </script>
 </body>
 </html>
