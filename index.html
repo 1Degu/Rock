@@ -20,8 +20,18 @@
 
         function playRound(playerSelection, computerPick) {
             if (playerSelection == "Rock" && computerPick == "Scissors") {
-                console.log("player Wins");
-            } else {
+                console.log("player wins");
+            } else if (playerSelection == "Rock" && computerPick == "Paper") {
+                console.log("computer Win")
+				} else if (playerSelection == "Scissors" && computerPick == "Rock") {
+					console.log("computer Win")
+				} else if (playerSelection == "Scissors" && computerPick == "Paper") {
+					console.log("player wins")
+				} else if (playerSelection == "Paper" && computerPick == "Rock") {
+					console.log("player wins")
+				} else if (playerSelection == "Paper" && computerPick == "Scissors") {
+					console.log("computer Win")
+                 } else {
                     console.log("another result");
 				}
 
