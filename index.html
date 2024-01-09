@@ -20,17 +20,17 @@
 
         function playRound(playerSelection, computerPick) {
             if (playerSelection == "Rock" && computerPick == "Scissors") {
-                return "player wins"
+                results.push("player wins");
             } else if (playerSelection == "Rock" && computerPick == "Paper") {
-                return "computer wins"
+                results.push("computer wins");
 				} else if (playerSelection == "Scissors" && computerPick == "Rock") {
-					return "computer wins"
+					results.push("computer wins");
 				} else if (playerSelection == "Scissors" && computerPick == "Paper") {
-					return "player wins"
+					results.push("player wins");
 				} else if (playerSelection == "Paper" && computerPick == "Rock") {
-					return "player wins"
+					results.push("player wins");
 				} else if (playerSelection == "Paper" && computerPick == "Scissors") {
-					return "computer wins"
+					results.push("computer wins");
                  } else {
                     console.log("another result");
 				}
