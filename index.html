@@ -7,10 +7,10 @@
 </head>
 <body>
     <script>
-        let playerSelection = prompt("Please enter Rock, Paper or Scissors:");
+        let playerSelection = prompt("Please enter rock, paper or Scissors:");
         console.log(playerSelection);
-
-        let choice = ["Rock", "Paper", "Scissors"];
+        playerSelection = playerSelection.toLowerCase();
+        let choice = ["rock", "paper", "scissors"];
         let computerPick ;
         function getComputerChoice() {
          computerPick  = choice [Math.floor(Math.random() * choice.length)];
@@ -22,17 +22,17 @@
         let playerScore = 0;
         let tie = 0;
         function playRound(playerSelection, computerPick) {
-            if (playerSelection == "Rock" && computerPick == "Scissors") {
+            if (playerSelection == "rock" && computerPick == "scissors") {
                 playerScore++;
-            } else if (playerSelection == "Rock" && computerPick == "Paper") {
+            } else if (playerSelection == "rock" && computerPick == "paper") {
                 computerScore++;
-				} else if (playerSelection == "Scissors" && computerPick == "Rock") {
+				} else if (playerSelection == "scissors" && computerPick == "rock") {
 					computerScore++;
-				} else if (playerSelection == "Scissors" && computerPick == "Paper") {
+				} else if (playerSelection == "scissors" && computerPick == "paper") {
 					playerScore++;
-				} else if (playerSelection == "Paper" && computerPick == "Rock") {
+				} else if (playerSelection == "paper" && computerPick == "rock") {
 					playerScore++;
-				} else if (playerSelection == "Paper" && computerPick == "Scissors") {
+				} else if (playerSelection == "paper" && computerPick == "scissors") {
 					computerScore++;
                  } else {
                     tie++;
