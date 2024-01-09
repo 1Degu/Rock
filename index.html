@@ -18,42 +18,41 @@
         getComputerChoice();
         console.log(computerPick);
 
-        let results = []; 
-
+        let computerScore = 0;
+        let playerScore = 0;
+        let tie = 0;
         function playRound(playerSelection, computerPick) {
             if (playerSelection == "Rock" && computerPick == "Scissors") {
-                results.push("player wins");
+                playerScore++;
             } else if (playerSelection == "Rock" && computerPick == "Paper") {
-                results.push("computer wins");
+                computerScore++;
 				} else if (playerSelection == "Scissors" && computerPick == "Rock") {
-					results.push("computer wins");
+					computerScore++;
 				} else if (playerSelection == "Scissors" && computerPick == "Paper") {
-					results.push("player wins");
+					playerScore++;
 				} else if (playerSelection == "Paper" && computerPick == "Rock") {
-					results.push("player wins");
+					playerScore++;
 				} else if (playerSelection == "Paper" && computerPick == "Scissors") {
-					results.push("computer wins");
+					computerScore++;
                  } else {
-                    console.log("another result");
+                    tie++;
 				}
 
             }
-      
+            playRound(playerSelection, computerPick);
+            playRound(playerSelection, computerPick);
+            playRound(playerSelection, computerPick);
+            playRound(playerSelection, computerPick);
+            playRound(playerSelection, computerPick);
+            console.log(playerScore + "player");
+    console.log(computerScore +"Computer");
+    console.log(tie +"tie");
            
 
 
-let computerScore = 0;
-let playerScore = 0;
 
-function game() {
 
-for (let round = 0; round < 5; round++) {
-    playRound(playerSelection, computerPick);
-} 
-console.log(playerScore);
-    console.log(computerScore);
-}
-game();
+
     </script>
 </body>
 </html>
